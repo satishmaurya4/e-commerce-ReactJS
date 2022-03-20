@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 1px 8px goldenrod;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo, .nav-item,.cart{
+    color: goldenrod
+}
+.logo{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.logo:hover{
+    filter: drop-shadow(0 0 5px goldenrod);
+}
+.nav-item{
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+.nav-item:hover{
+    box-shadow: 0 0 5px goldenrod;
+}
+.cart{
+    transition: all 0.3s ease-in-out;
+}
+.cart:hover{
+filter: drop-shadow(0 0 5px goldenrod);
+}
