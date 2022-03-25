@@ -1,0 +1,26 @@
+.modal{
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+.modal-container{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.modal-image{
+    width: 400px;
+    margin-right: 20px;
+}
+.modal-image img{
+    width: 100%;
+}

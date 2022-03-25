@@ -1,0 +1,73 @@
+.detail-product-container{
+    margin-top: 20px;
+    max-width: 600px;
+    width:100%;
+    box-shadow: 0 0 5px goldenrod;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+.detail-product-image{
+    flex: 0.3;
+    align-items: center;
+    display: flex;
+}
+.detail-product-image img{
+    width: 100%;
+}
+.detail-product-info{
+    flex: 0.7;
+    padding-left: 10px;
+}
+.detail-product-title{
+    margin-bottom: 10px;
+}
+.detail-product-description{
+    color: rgb(68, 68, 68);
+    margin-bottom: 10px;
+}
+.detail-product-rating-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.detail-product-rating-container span:first-child{
+    display: flex;
+    align-items: center;
+}
+.detail-product-rating-container span:last-child{
+    padding-left: 2px;
+}
+.detail-product-btn-container{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.detail-product-btn{
+    background-color: #000;
+    color: goldenrod;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    letter-spacing: 0.6px;
+    border: none;
+}
+.detail-product-btn:hover{
+    background-color: #fff;
+color: goldenrod;
+cursor: pointer;
+box-shadow: 0 0 5px goldenrod;
+}
+.detail-product-inCart-btn{
+    background-color: #000;
+    color: goldenrod;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    letter-spacing: 0.6px;
+    border: none;
+}

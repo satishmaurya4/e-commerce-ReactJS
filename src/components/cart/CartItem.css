@@ -1,0 +1,22 @@
+.cart-item{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 10px;
+}
+.cart-item-image{
+    width: 80px;
+}
+.cart-item-btn-container{
+    display: flex;
+    gap: 5px;
+}
+.cart-item-btn-container button{
+    background-color: #000;
+    color: goldenrod;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    font-size: 18px;
+   
+}

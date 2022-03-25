@@ -9,7 +9,7 @@ const Nav = () => {
       <Link to="/">
         <div className="logo">e-SHOP</div>
       </Link>
-      <Link to="/products">
+      <Link to="/">
         <div className="nav-item">products</div>
       </Link>
       <Link to="/cart">
