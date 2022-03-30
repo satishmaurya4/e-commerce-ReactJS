@@ -6,6 +6,7 @@ const URL = 'https://fakestoreapi.com/products';
 
 const AppProvider = ({ children }) => {
     const [data, setData] = useState(null);
+    const [showProduct, setShowProduct] = useState([])
     const [cartItem, setCartItem] = useState([]);
     const [totalCartItem, setTotalCartItem] = useState([]);
     const [detailProduct, setDetailProduct] = useState({});
@@ -17,7 +18,7 @@ const AppProvider = ({ children }) => {
         const product = data?.find((item) => item.id === id);
         return product;
     }
-
+console.log('show product', showProduct)
     const addToCart = (id) => {
         // const tempProduct = [...data];
         // const index = tempProduct.indexOf(getItem(id));
@@ -40,10 +41,12 @@ const AppProvider = ({ children }) => {
     const setProducts = async() => {
         const response = await fetch(URL);
         const getData = await response.json();
+        
         const modifiedData = getData.map((item) => {
             return { ...item, count: 0, total: item.price }
         });
         setData(modifiedData)
+        setShowProduct(modifiedData)
         setDetailProduct(modifiedData[0]);
         setLoading(true);
     }
@@ -122,6 +125,8 @@ if (selectedItem.count  === 0) {
     useEffect(() => {
         // fetch(URL).then((response) => response.json()).then((realData) => setData(realData)); 
         setProducts();
+        setShowProduct(data);
+       
     }, [])
     // useEffect(() => {
     //     setCartAmount(addTotal());
@@ -136,7 +141,7 @@ if (selectedItem.count  === 0) {
         calculateCartCount();
     }, [cartItem])
     return (
-        <AppContext.Provider value={{data, cartItem,cartCount,getItem,addToCart,detailHandler,detailProduct, plusProduct, minusProduct,deleteProduct,totalAmount,clearCart,loading}}>
+        <AppContext.Provider value={{data,showProduct,setShowProduct, cartItem,cartCount,getItem,addToCart,detailHandler,detailProduct, plusProduct, minusProduct,deleteProduct,totalAmount,clearCart,loading}}>
             {children}
         </AppContext.Provider>
     )

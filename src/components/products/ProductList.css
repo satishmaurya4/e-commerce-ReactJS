@@ -1,13 +1,14 @@
 .product-page-container{
     display: flex;
-    width: 1128px;
-    max-width: 100%;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: calc(1128px - 240px);
+    margin-left: auto;
+    padding-left: 20px;
 }
 .product-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    flex: 0.8;
 }

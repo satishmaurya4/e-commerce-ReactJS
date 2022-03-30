@@ -6,6 +6,7 @@ import ProductList from './components/products/ProductList'
 import Details from './components/details/Details'
 import Cart from './components/cart/Cart'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AppBody from './components/appBody/AppBody'
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
           <Nav />
           <div className='app-body'>
               <Routes>
-                  <Route path='/' element={<ProductList />} />
+                  <Route path='/' element={<AppBody/>} />
                   <Route path='/details' element={<Details />} />
                   <Route path='/cart' element={<Cart />} />
               </Routes>
