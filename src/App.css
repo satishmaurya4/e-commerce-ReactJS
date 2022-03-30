@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 a{
-    text-decoration: none;
+    text-decoration: none!important;
 }
 .app-body{
     margin-top: 40px;

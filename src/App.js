@@ -5,6 +5,8 @@ import './App.css'
 import ProductList from './components/products/ProductList'
 import Details from './components/details/Details'
 import Cart from './components/cart/Cart'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   return (
       <BrowserRouter>

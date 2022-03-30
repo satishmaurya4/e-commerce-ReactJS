@@ -1,9 +1,3 @@
-.cart-container{
-    max-width: 1128px;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-}
 .cart-title{
     text-transform: capitalize;
     text-align: center;
@@ -12,5 +6,4 @@
 .cart-header-text{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    border: 1px solid;
 }

@@ -32,9 +32,31 @@
 .nav-item:hover{
     box-shadow: 0 0 5px goldenrod;
 }
+.cart-icon-container{
+    position: relative;
+}
 .cart{
     transition: all 0.3s ease-in-out;
 }
 .cart:hover{
 filter: drop-shadow(0 0 5px goldenrod);
+}
+.cart-count{
+    position: absolute;
+   left: 18px;
+   top: -8px;
+    background-color: goldenrod;
+    color: #000;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+.cart-plus-icon{
+    color: #000;
+    /* position: absolute; */
 }

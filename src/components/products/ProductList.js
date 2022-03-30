@@ -2,11 +2,19 @@ import React from 'react'
 import './ProductList.css'
 import { useProviderValue } from '../../context'
 import Product from './Product';
+import Loading from '../loading/Loading';
+import LeftSide from './LeftSide';
 
 const ProductList = () => {
-    const { data } = useProviderValue();
-  return (
-      <div className='product-container'>
+    const { data, loading } = useProviderValue();
+    return (
+        <div className='product-page-container'>
+            
+            <LeftSide />
+            {
+                loading ? (
+                    <>
+                    <div className='product-container'>
           {
               data?.map((item) => {
                   return (
@@ -14,7 +22,12 @@ const ProductList = () => {
                   )
               })
           }
-    </div>
+            </div>
+                    </>
+                ) : <Loading />
+            }
+      
+            </div>
   )
 }
 

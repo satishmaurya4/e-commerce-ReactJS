@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const Details = () => {
-    const { detailProduct } = useProviderValue();
+    const { detailProduct, addToCart } = useProviderValue();
     const { id, title, price, description, image, inCart,rating } = detailProduct;
     console.log(inCart)
   return (
@@ -22,7 +22,8 @@ const Details = () => {
                   <span>{rating?.rate}<StarPurple500RoundedIcon /></span>|<span>{rating?.count} reviews</span>
               </div>
               <div className='detail-product-btn-container'>
-                  <Link to='/'><button className='detail-product-btn'>continue shopping</button></Link><button className={inCart ? 'detail-product-inCart-btn' : 'detail-product-btn'} disabled={inCart ? true : false}>{inCart ? 'product in cart' : 'add to cart'}</button>
+                  <Link to='/'><button className='detail-product-btn'>continue shopping</button></Link>
+                  <button className={inCart ? 'detail-product-inCart-btn' : 'detail-product-btn'} disabled={inCart ? true : false} onClick={()=>addToCart(id)}>{inCart ? 'product in cart' : 'add to cart'}</button>
               </div>
           </div>
       </div>

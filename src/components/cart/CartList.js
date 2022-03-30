@@ -5,12 +5,10 @@ import './CartList.css'
 
 
 const CartList = () => {
-    const { cart } = useProviderValue();
-    console.log('from cart list',cart)
+    const { cartItem } = useProviderValue();
   return (
       <div className='cart-container'>
-          {console.log('return from cart list')}
-          <h1 className='cart-title'>your cart</h1>
+ 
           <div className='cart-header-text'>
               <span>Product</span>
               <span>Product Name</span>
@@ -21,7 +19,7 @@ const CartList = () => {
           </div>
           <div className='cart-items'>
               {
-                  cart.map((item) => {
+                  cartItem.map((item) => {
                       return (
                           <CartItem key={item.id} {...item}/>
                       )
