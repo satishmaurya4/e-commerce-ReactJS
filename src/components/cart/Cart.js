@@ -12,14 +12,14 @@ const Cart = () => {
     <div className='cart-container'>
       
       <h1 className="cart-title">{cartItem.length === 0 ? 'your cart is empty' : 'your cart'}</h1>
-      
+      <div className='cart-content'>
       {
         cartItem.length > 0 && <>
         <CartList />
         <CartTotal />
-        
         </>
-     }
+        }
+        </div>
           
         
     </div>

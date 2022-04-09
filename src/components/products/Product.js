@@ -1,13 +1,12 @@
 import React from 'react'
 import './Product.css'
-import StarPurple500RoundedIcon from '@mui/icons-material/StarPurple500Rounded';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import { useProviderValue } from '../../context';
-import Modal from '../modal/Modal'
 import {Link} from 'react-router-dom'
 
-const Product = ({ id, image, price, rating, title }) => {
+const Product = ({ id, image, price, rating, title, productNotFound }) => {
 
-    const { data,getItem, addToCart,detailHandler } = useProviderValue();
+    const {addToCart,detailHandler } = useProviderValue();
   return (
       <div className='product'>
           <h2 className='product-title'>{title}</h2>
@@ -19,7 +18,7 @@ const Product = ({ id, image, price, rating, title }) => {
               </Link>
           <p className='product-price'>$ {price}</p>
           <div className='rating-container'>
-              <span className='rating'>{rating.rate}<StarPurple500RoundedIcon /></span>
+              <span className='rating'>{rating.rate}< StarOutlineIcon /></span>
               <span className='rating-count'>{rating.count} reviews</span>
           </div>
           <button type='button' onClick={() => addToCart(id)} className='add-to-cart-btn'>

@@ -2,5 +2,22 @@
     max-width: 1128px;
     width: 100%;
     margin: auto;
+    margin-bottom: 20px;
     padding: 10px;
+}
+.cart-content{
+    display: flex;
+}
+
+@media only screen and (max-width: 1200px){
+ .cart-content{
+     justify-content: space-between;
+ }
+}
+@media only screen and (max-width: 480px){
+    .cart-content{
+        display: flex;
+        flex-direction: column;
+    }
+
 }

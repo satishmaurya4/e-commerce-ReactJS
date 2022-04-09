@@ -6,22 +6,28 @@ import './CartList.css'
 
 const CartList = () => {
     const { cartItem } = useProviderValue();
+    console.log("cart list", cartItem)
   return (
-      <div className='cart-container'>
+      <div className='cartList-container'>
  
           <div className='cart-header-text'>
               <span>Product</span>
+              <div className='cart-header-text-info'>
               <span>Product Name</span>
               <span>Price</span>
               <span>Quantity</span>
               <span>Remove</span>
-              <span>Total</span>
+                  <span>Total</span>
+                  </div>
           </div>
           <div className='cart-items'>
               {
-                  cartItem.map((item) => {
+                  cartItem.map((item,i) => {
                       return (
-                          <CartItem key={item.id} {...item}/>
+                          <div key={item.id}>
+                              <CartItem  {...item} />
+                              {cartItem[cartItem.length - 1] === item ? "" : <hr/>}
+                              </div>
                       )
                   })
               }

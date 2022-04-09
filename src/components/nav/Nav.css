@@ -1,13 +1,23 @@
-.nav{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.nav-container{
     height: 60px;
     box-shadow: 0 1px 8px goldenrod;
     background-color: black;
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 999;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    max-width: 1128px;
+    width: 100%;
+   
 }
 .logo, .nav-item,.cart{
     color: goldenrod
@@ -21,16 +31,28 @@
 .logo:hover{
     filter: drop-shadow(0 0 5px goldenrod);
 }
+.nav-item-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    gap: 30px;
+    
+}
 .nav-item{
     text-transform: capitalize;
     font-size: 18px;
-    padding: 5px;
+    padding: 2px 5px;
+    color: goldenrod;
+    padding: 2px 8px;
+    border-bottom: 2px solid transparent;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    
+    position: relative;
+    cursor: pointer;
 }
-.nav-item:hover{
-    box-shadow: 0 0 5px goldenrod;
+.nav-item:hover,.cart:hover,.avatar-icon:hover{
+    color: rgb(163, 138, 75)
 }
 .cart-icon-container{
     position: relative;
@@ -38,13 +60,10 @@
 .cart{
     transition: all 0.3s ease-in-out;
 }
-.cart:hover{
-filter: drop-shadow(0 0 5px goldenrod);
-}
 .cart-count{
     position: absolute;
-   left: 18px;
-   top: -8px;
+   left: 20px;
+   top: -6px;
     background-color: goldenrod;
     color: #000;
     border-radius: 50%;
@@ -59,4 +78,31 @@ filter: drop-shadow(0 0 5px goldenrod);
 .cart-plus-icon{
     color: #000;
     /* position: absolute; */
+}
+.avatar-icon{
+    color: goldenrod;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    .nav-container{
+        height: 120px;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav-item-container{
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .nav-item{
+        font-size: 16px;
+
+    }
+  }
+@media only screen and (max-width: 312px) {
+.nav-item{
+    font-size: 12px;
+}
 }

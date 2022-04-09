@@ -1,5 +1,6 @@
 .product{
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
     color: goldenrod;
     background-color: black;
     padding: 5px;
@@ -67,3 +68,8 @@
     font-size: 16px;
     width: 100%;
 }
+/* @media only screen and (max-width: 320px) {
+    .nav-item{
+        font-size: 12px;
+    }
+    } */

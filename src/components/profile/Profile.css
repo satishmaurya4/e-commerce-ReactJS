@@ -1,0 +1,49 @@
+.profile-container{
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor:default;
+    text-transform: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    z-index: 999;
+}
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.profile-content-text{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.profile-content-text span:first-child{
+    color: rgba(0,0,0,0.6)
+}
+.profile-content-text span:last-child{
+    color: goldenrod;
+}
+.signup-btn{
+    border: 2px solid transparent;
+    background-color: goldenrod;
+    color: #000;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.signup-btn:hover{
+    border-color:goldenrod;
+    background-color: #fff;
+    color: goldenrod;
+}
+@media only screen and (max-width: 524px){
+    .profile-container{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
