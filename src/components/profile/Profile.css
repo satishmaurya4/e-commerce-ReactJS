@@ -3,7 +3,7 @@
     position: absolute;
     top: 100%;
     right: 0px;
-    width: max-content;
+    max-width: 300px;
     padding: 10px;
     border-radius: 10px;
     display: flex;
