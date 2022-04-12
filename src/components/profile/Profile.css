@@ -41,12 +41,6 @@
     background-color: #fff;
     color: goldenrod;
 }
-/* @media only screen and (max-width: 524px){
-    .profile-container{
-        left: 50%;
-        transform: translateX(-50%);
-    } */
-/* } */
 @media only screen and (max-width: 620px){
     .profile-container{
         max-width: 300px;
