@@ -2,14 +2,15 @@ import React from "react";
 import "./Profile.css";
 import { useProviderValue } from "../../context";
 import { useNavigate } from "react-router-dom";
+import { useSignUpProviderValue } from "../form/signup/context";
 
 const Profile = () => {
   const {
-    getFormValues: { username, email, contactNo },
     showProfileContent,
     setShowProfileContent,
     setShowProfile,
   } = useProviderValue();
+  const { getFormValues:{ username, email, contactNo }, setIsSubmit } = useSignUpProviderValue();
   console.log("form values", username, email, contactNo);
   const navigate = useNavigate();
   const handleProfile = () => {
@@ -20,6 +21,7 @@ const Profile = () => {
   const handleSignOut = () => {
     setShowProfileContent(false);
     setShowProfile(false);
+    setIsSubmit(false)
     navigate("/signup");
   };
 

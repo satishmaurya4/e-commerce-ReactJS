@@ -20,63 +20,7 @@ const AppProvider = ({ children }) => {
   const [clearFilter, setClearFilter] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [showProfileContent, setShowProfileContent] = useState(false);
-  const [formValues, setFormValues] = useState({
-    username: "",
-    email: "",
-    contactNo: "",
-    password: "",
-    cofirmPassword: "",
-  });
-  const [getFormValues, setGetFormValues] = useState({});
-
-  const formData = [
-    {
-      id: 1,
-      name: "username",
-      type: "text",
-      errorMessage:
-        "Username should be 3-10 letters and it should not contain any special character!",
-      label: "username",
-      pattern: "^[A-Za-z0-9]{3,16}$",
-      required: true,
-    },
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      errorMessage: "Please write valid email!",
-      label: "email",
-      required: true,
-    },
-    {
-      id: 3,
-      name: "contactNo",
-      type: "text",
-      errorMessage: "Please wirte 10 digits contact number!",
-      label: "contact number",
-      pattern: "^[7-9][0-9]{9}$",
-      required: true,
-    },
-    {
-      id: 4,
-      name: "password",
-      type: "password",
-      errorMessage:
-        "Password should contains aA1& and between 8-16 characters!",
-      label: "password",
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{8,20}`,
-      required: true,
-    },
-    {
-      id: 5,
-      name: "cofirmPassword",
-      type: "password",
-      errorMessage: "Password should be matched!",
-      label: "confirm Password",
-      pattern: formValues.password,
-      required: true,
-    },
-  ];
+ 
 
   const getItem = (id) => {
     const product = data?.find((item) => item.id === id);
@@ -295,15 +239,11 @@ const AppProvider = ({ children }) => {
         rating,
         setRating,
         setClearFilter,
-        formData,
-        formValues,
-        setFormValues,
         showProfile,
         setShowProfile,
         showProfileContent,
         setShowProfileContent,
-        getFormValues,
-        setGetFormValues,
+        
       }}
     >
       {children}

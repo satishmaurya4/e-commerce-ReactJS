@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { useProviderValue } from "../../context";
 import Profile from "../profile/Profile";
+import { useSignUpProviderValue } from "../form/signup/context";
 
 const Nav = () => {
   const {
@@ -11,8 +12,9 @@ const Nav = () => {
     showProfile,
     setShowProfile,
     showProfileContent,
-    getFormValues: { username },
   } = useProviderValue();
+
+  const { getFormValues: { username } } = useSignUpProviderValue();
 
   let activeStyle = {
     borderBottom: "2px solid goldenrod",
@@ -20,6 +22,7 @@ const Nav = () => {
 
   return (
     <div className="nav-container">
+      {console.log("show profile content nav", showProfileContent)}
       <nav className="nav">
         <NavLink to="/">
           <div className="logo">e-SHOP</div>

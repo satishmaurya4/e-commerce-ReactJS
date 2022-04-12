@@ -81,6 +81,70 @@
     border-radius: 5px;
 }
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.input-control{
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+}
+.input{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 0.5rem 0.6rem;
+    background:none;
+    z-index: 1;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.input-container p{
+    margin: 0;
+    color: tomato;
+}
+
+/* .input:invalid[focused = 'true'] ~ span{
+    display: block;
+} */
+.label{
+    position: absolute;
+    left: 0.6rem;
+    top: 0.5rem;
+    padding: 0  .2rem;
+    background-color: #fff;
+    transition: 0.3s;
+    text-transform: capitalize;
+    color: gray;
+}
+.input:focus + .label{
+    top: -.7rem;
+    left: .6rem;
+    z-index: 8;
+    color: #000;
+    font-size: 14px;
+  }
+  .input:focus{
+      border-color: goldenrod;
+  }
+  .input:not(:placeholder-shown).input:not(:focus)+ .label{
+    top: -.7rem;
+    left: .6rem;
+    z-index: 8;
+    color: #000;
+    font-size: 14px;
+
+  }
+
+
 @media only screen and (max-width: 290px){
     .signup-title::before{
         left: -1px;
