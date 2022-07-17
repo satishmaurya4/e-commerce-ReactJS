@@ -205,7 +205,6 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     setCart();
-    calculateCartCount();
   }, [totalCartItem]);
 
   useEffect(() => {

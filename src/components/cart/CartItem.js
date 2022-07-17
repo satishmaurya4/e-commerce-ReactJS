@@ -14,7 +14,9 @@ const CartItem = ({ id, image, title, count, price, total }) => {
         <p className="cart-item-name">{title}</p>
       <p className="cart-item-price"><span className="cart-item-price-text">Price:</span>$ {price}</p>
           <div className='cart-item-btn-container'>
-        <button onClick={()=>minusProduct(id)}><KeyboardArrowDownSharpIcon /></button><span>{count}</span><button onClick={()=>plusProduct(id)}><KeyboardArrowUpSharpIcon /></button>
+          <button onClick={() => minusProduct(id)}><KeyboardArrowDownSharpIcon /></button>
+          <span>{count}</span>
+          <button onClick={() => plusProduct(id)}><KeyboardArrowUpSharpIcon /></button>
           </div>
           <span onClick={()=>deleteProduct(id)} className='delete-icon-container'><DeleteForeverOutlinedIcon /></span>
       <p className='cart-item-total'><span className="cart-item-total-text">Total:</span>$ { total}</p>
